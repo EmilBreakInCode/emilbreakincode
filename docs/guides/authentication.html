@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аутентификация — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Аутентификация</h1>
+        <p>Веб-интерфейс использует сессионные cookie и роли: <code>operator</code>
+        (просмотр и наряды), <code>admin</code> (настройка и пользователи).
+        REST API аутентифицируется ключом в заголовке <code>X-API-Key</code>.</p>
+        <pre><code>curl -H <span class="tok-str">"X-API-Key: zm_live_9f2c71"</span> https://api.zernomonitor.example/v1/users</code></pre>
+        <p>Ключи выпускаются в разделе Настройки → API-ключи и хранятся только
+        в хешированном виде. Компрометированный ключ отзывается немедленно.</p>
+        <p><a href="../index.html">← Обзор документации</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

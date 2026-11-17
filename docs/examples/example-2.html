@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 2: JS-дашборд — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Пример 2: мини-дашборд на JavaScript</h1>
+        <p>Фрагмент клиентского кода: загружает показания и рисует таблицу с подсветкой тревог.</p>
+        <pre><code><span class="tok-kw">async function</span> <span class="tok-fn">load</span>() {
+  <span class="tok-kw">const</span> res = <span class="tok-kw">await</span> <span class="tok-fn">fetch</span>(<span class="tok-str">"/v1/readings?limit=6"</span>, {
+    headers: { <span class="tok-str">"X-API-Key"</span>: KEY }
+  });
+  <span class="tok-kw">const</span> rows = <span class="tok-kw">await</span> res.<span class="tok-fn">json</span>();
+  table.innerHTML = rows.<span class="tok-fn">map</span>(r =&gt;
+    <span class="tok-str">`&lt;tr class="${r.t_c &gt; 25 ? 'alert' : ''}"&gt;
+       &lt;td&gt;${r.sensor}&lt;/td&gt;&lt;td&gt;${r.t_c}&lt;/td&gt;&lt;td&gt;${r.w_pct}&lt;/td&gt;&lt;/tr&gt;`</span>
+  ).<span class="tok-fn">join</span>(<span class="tok-str">""</span>);
+}
+<span class="tok-fn">setInterval</span>(load, <span class="tok-num">900000</span>);</code></pre>
+        <p><a href="index.html">← Примеры</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@
   commit после каждого задания, merge, разрешение конфликтов, release-тег v1.0.0) и развернуть
   многостраничный статический сайт как Origin для последующего подключения CDN Cloudflare.
 
-## Начальная структура проекта
+## Структура проекта (по методичке)
 
 ```text
 emilbreakincode.github.io/
@@ -26,27 +26,51 @@ emilbreakincode.github.io/
 │   └── index.html              # о сайте / о системе
 ├── blog/
 │   └── post1.html              # первая запись блога (зачем мониторинг бурта)
-├── getting-started/
-│   ├── index.html              # установка и первый запуск
-│   └── configuration.html      # настройка порогов и интервалов опроса
-├── guides/
-│   ├── sensors.html            # размещение датчиков в бурте
-│   └── alerts.html             # пороги, уведомления, журнал событий
-├── api/
-│   ├── index.html              # обзор REST API
-│   └── readings.html           # эндпоинт показаний датчиков
-├── faq.html                    # частые вопросы
-├── changelog.html              # история версий
 └── docs/
-    └── report.md               # отчёт по лабораторной работе (ветка docs/user-guide)
+    ├── index.html              # обзор проекта
+    ├── getting-started/
+    │   ├── index.html          # установка
+    │   ├── configuration.html
+    │   └── first-steps.html
+    ├── guides/
+    │   ├── index.html
+    │   ├── authentication.html
+    │   ├── api-basics.html
+    │   ├── advanced-usage.html
+    │   └── troubleshooting.html
+    ├── api/
+    │   ├── index.html
+    │   ├── users.html
+    │   ├── orders.html
+    │   └── webhooks.html
+    ├── examples/
+    │   ├── index.html
+    │   ├── example-1.html
+    │   └── example-2.html
+    ├── changelog.html
+    ├── faq.html
+    ├── assets/
+    │   ├── css/
+    │   │   ├── docs.css
+    │   │   └── syntax-highlight.css
+    │   ├── js/
+    │   │   ├── search.js
+    │   │   ├── sidebar.js
+    │   │   └── copy-code.js
+    │   ├── images/
+    │   │   ├── architecture-diagram.svg
+    │   │   ├── flow-chart.png
+    │   │   └── screenshots/
+    │   │       └── dashboard.png
+    │   └── videos/
+    │       └── demo.mp4
+    └── search-index.json       # для клиентского поиска
 ```
 
-## Схема веток
+## Ветки и релизы
 
-- `main` — стабильные версии, только merge из `develop`, release-теги;
-- `develop` — интеграционная ветка разработки;
-- `feature/*` — новая функциональность сайта (страницы, стили, интерактив);
-- `docs/*` — документация и отчёт.
+Разработка ведётся в ветке `main` (упрощённый сценарий практикума);
+стабильная версия фиксируется release-тегом `v1.0.0`.
 
 ## Публикация
 

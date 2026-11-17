@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API /orders — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>API /orders</h1>
+        <p>Наряды — задачи на работы с буртом: вентиляция, сушка, перемещение.
+        <code>POST /v1/orders</code> создаёт наряд, <code>PATCH /v1/orders/{id}</code>
+        меняет статус (<code>new → in_progress → done</code>).</p>
+        <pre><code>{
+  <span class="tok-str">"id"</span>: <span class="tok-num">42</span>,
+  <span class="tok-str">"type"</span>: <span class="tok-str">"ventilation"</span>,
+  <span class="tok-str">"zone"</span>: <span class="tok-str">"center"</span>,
+  <span class="tok-str">"reason"</span>: <span class="tok-str">"T2 &gt; 25 C for 3 cycles"</span>,
+  <span class="tok-str">"status"</span>: <span class="tok-str">"in_progress"</span>
+}</code></pre>
+        <p>Наряд, созданный автоматикой, содержит ссылку на событие тревоги
+        в поле <code>alert_id</code>.</p>
+        <p><a href="index.html">← REST API</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

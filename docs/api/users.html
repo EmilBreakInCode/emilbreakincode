@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API /users — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>API /users</h1>
+        <p><code>GET /v1/users</code> — список учётных записей (только роль <code>admin</code>).
+        <code>POST /v1/users</code> — создание оператора.</p>
+        <pre><code>[
+  {
+    <span class="tok-str">"id"</span>: <span class="tok-num">1</span>,
+    <span class="tok-str">"login"</span>: <span class="tok-str">"operator1"</span>,
+    <span class="tok-str">"role"</span>: <span class="tok-str">"operator"</span>,
+    <span class="tok-str">"active"</span>: <span class="tok-kw">true</span>
+  }
+]</code></pre>
+        <p>Поля: <code>login</code> (3–32 символа), <code>role</code>
+        (<code>operator</code> | <code>admin</code>), <code>active</code>.
+        Пароль задаётся отдельным запросом <code>POST /v1/users/{id}/password</code>.</p>
+        <p><a href="index.html">← REST API</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

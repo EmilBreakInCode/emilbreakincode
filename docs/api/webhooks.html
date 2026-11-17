@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API /webhooks — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>API /webhooks</h1>
+        <p><code>POST /v1/webhooks</code> подписывает внешний URL на события
+        <code>alert.raised</code>, <code>alert.cleared</code>, <code>order.done</code>.
+        Доставка: POST с JSON-телом, таймаут 5 с, три повтора с экспоненциальной задержкой.</p>
+        <pre><code>{
+  <span class="tok-str">"event"</span>: <span class="tok-str">"alert.raised"</span>,
+  <span class="tok-str">"sensor"</span>: <span class="tok-str">"T2"</span>,
+  <span class="tok-str">"value"</span>: <span class="tok-num">26.8</span>,
+  <span class="tok-str">"threshold"</span>: <span class="tok-num">25.0</span>,
+  <span class="tok-str">"ts"</span>: <span class="tok-str">"2026-11-17T09:15:00Z"</span>
+}</code></pre>
+        <p>Подпись тела — HMAC-SHA256 в заголовке <code>X-ZM-Signature</code>
+        (секрет выдаётся при создании подписки).</p>
+        <p><a href="index.html">← REST API</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

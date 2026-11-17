@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>REST API</h1>
+        <p>Базовый URL и форматы — в <a href="../guides/api-basics.html">основах API</a>.
+        Аутентификация — заголовок <code>X-API-Key</code>.</p>
+        <table>
+            <tr><th>Ресурс</th><th>Методы</th><th>Назначение</th></tr>
+            <tr><td><a href="users.html">/users</a></td><td>GET, POST</td><td>Учётные записи операторов и администраторов</td></tr>
+            <tr><td><a href="orders.html">/orders</a></td><td>GET, POST, PATCH</td><td>Наряды на вентиляцию, сушку, перемещение бурта</td></tr>
+            <tr><td><a href="webhooks.html">/webhooks</a></td><td>GET, POST, DELETE</td><td>Подписки на события тревог</td></tr>
+            <tr><td><code>/readings</code></td><td>GET</td><td>Показания датчиков (пример в <a href="../guides/api-basics.html">основах API</a>)</td></tr>
+        </table>
+        <p><a href="../index.html">← Обзор документации</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

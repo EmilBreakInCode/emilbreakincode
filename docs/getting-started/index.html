@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Установка</h1>
+        <p>Комплект поставки: датчики температуры T1–T4 и влажности W1–W2, шлюз ZM-G1
+        (RS-485 → Ethernet), серверная часть ZernoMonitor Core.</p>
+        <h2>Порядок монтажа</h2>
+        <ol>
+            <li>Разместите датчики по схеме бурта: три уровня по высоте, центр и периферия;</li>
+            <li>Подключите датчики к шлюзу шиной RS-485 (витая пара, терминаторы 120 Ом);</li>
+            <li>Подключите шлюз к локальной сети и задайте ему статический IP;</li>
+            <li>Разверните ZernoMonitor Core на сервере в той же сети;</li>
+            <li>Добавьте шлюз в веб-интерфейсе: Настройки → Шлюзы → Добавить.</li>
+        </ol>
+        <h2>Проверка связи</h2>
+        <pre><code>zmctl gateway ping 192.168.1.50
+<span class="tok-com"># OK: 6 sensors online, rssi -47 dBm</span></code></pre>
+        <p><a href="../index.html">← Обзор документации</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

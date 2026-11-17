@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройка — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Настройка</h1>
+        <p>Основной файл конфигурации <code>config.json</code> задаёт интервал опроса
+        и пороги тревог. Значения по умолчанию соответствуют требованиям хранения
+        продовольственного зерна.</p>
+        <pre><code>{
+  <span class="tok-str">"poll_interval_sec"</span>: <span class="tok-num">900</span>,
+  <span class="tok-str">"thresholds"</span>: {
+    <span class="tok-str">"temperature_c"</span>: <span class="tok-num">25.0</span>,
+    <span class="tok-str">"humidity_pct"</span>: <span class="tok-num">17.0</span>
+  },
+  <span class="tok-str">"alert_channels"</span>: [<span class="tok-str">"web"</span>, <span class="tok-str">"email"</span>, <span class="tok-str">"webhook"</span>]
+}</code></pre>
+        <p>После изменения конфигурации выполните <code>zmctl config reload</code> —
+        перезапуск сервера не требуется.</p>
+        <p><a href="../index.html">← Обзор документации</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

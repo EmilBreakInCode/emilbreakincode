@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — ZernoMonitor</title>
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <link rel="stylesheet" href="assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Частые вопросы</h1>
+        <h2>Почему интервал опроса 15 минут, а не 1 минута?</h2>
+        <p>Тепловая инерция бурта велика: температура меняется на десятые доли градуса
+        в час. Более частый опрос расходует ресурс шины и батареи датчиков без пользы.</p>
+        <h2>Можно ли хранить зерно при влажности 18 %?</h2>
+        <p>Кратковременно — да, при температуре ниже 10 °C. Длительное хранение требует
+        сушки до 14–17 % в зависимости от культуры; порог системы по умолчанию 17 %.</p>
+        <h2>Что делать при отключении электричества?</h2>
+        <p>Шлюз буферизует до 24 ч показаний и догружает их после восстановления связи;
+        пропуски в журнале помечаются как <code>gap</code>.</p>
+        <h2>Сколько датчиков нужно на бурт?</h2>
+        <p>Минимум 4 temperature + 2 humidity на бурт до 500 т; для больших буртов —
+        по схеме зон (см. <a href="guides/advanced-usage.html">продвинутое использование</a>).</p>
+        <h2>Где взять тестовые данные для интеграции?</h2>
+        <p>Команда <code>zmctl simulate</code> генерирует синтетические показания и тревоги.</p>
+        <p><a href="index.html">← Обзор документации</a> · <a href="../index.html">На главную сайта</a></p>
+    </main>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/copy-code.js"></script>
+</body>
+</html>

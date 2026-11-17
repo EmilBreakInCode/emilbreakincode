@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первые шаги — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Первые шаги</h1>
+        <ol>
+            <li>Войдите в веб-интерфейс под учётной записью оператора (см. <a href="../guides/authentication.html">аутентификация</a>);</li>
+            <li>Откройте дашборд: карта бурта покажет текущие показания всех датчиков;</li>
+            <li>Дождитесь первого цикла опроса (по умолчанию 15 минут) или запустите внеочередной: <code>zmctl poll now</code>;</li>
+            <li>Проверьте журнал событий: Настройки → Журнал;</li>
+            <li>Смоделируйте тревогу командой <code>zmctl simulate overheat T2</code> и убедитесь, что уведомление доставлено.</li>
+        </ol>
+        <p>Скриншот дашборда: <a href="../assets/images/screenshots/dashboard.png">dashboard.png</a>.</p>
+        <p><a href="../index.html">← Обзор документации</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

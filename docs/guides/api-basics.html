@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы API — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Основы API</h1>
+        <p>Базовый URL: <code>https://api.zernomonitor.example/v1</code>.
+        Все ответы — JSON в UTF-8. Ошибки возвращаются с кодами 4xx/5xx
+        и телом <code>{"error": "...", "code": ...}</code>.</p>
+        <pre><code>curl -s https://api.zernomonitor.example/v1/readings?sensor=T2&amp;limit=5
+<span class="tok-com"># [{"ts":"2026-11-17T09:00:00Z","t_c":21.4,"w_pct":14.2}, ...]</span></code></pre>
+        <p>Пагинация: параметры <code>limit</code> (по умолчанию 100) и <code>offset</code>.
+        Подробности по ресурсам — в разделе <a href="../api/index.html">REST API</a>.</p>
+        <p><a href="../index.html">← Обзор документации</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>

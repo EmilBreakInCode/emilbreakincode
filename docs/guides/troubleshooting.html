@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диагностика — ZernoMonitor</title>
+    <link rel="stylesheet" href="../assets/css/docs.css">
+    <link rel="stylesheet" href="../assets/css/syntax-highlight.css">
+</head>
+<body>
+    <aside id="sidebar"></aside>
+    <main>
+        <h1>Диагностика</h1>
+        <table>
+            <tr><th>Симптом</th><th>Вероятная причина</th><th>Действие</th></tr>
+            <tr><td>Датчик offline</td><td>Обрыв шины RS-485</td><td>Проверить кабель и терминаторы, <code>zmctl gateway ping</code></td></tr>
+            <tr><td>Показания «скачут»</td><td>Наводки на длинной линии</td><td>Экранированная витая пара, заземление экрана с одной стороны</td></tr>
+            <tr><td>Влажность растёт во всех зонах</td><td>Конденсат под кровлей</td><td>Проветривание подкровельного пространства, проверка порога зоны</td></tr>
+            <tr><td>Нет уведомлений</td><td>Не настроен канал alert_channels</td><td>См. <a href="../getting-started/configuration.html">настройку</a></td></tr>
+            <tr><td>API отдаёт 401</td><td>Отозван или неверный API-ключ</td><td>Выпустить новый ключ, см. <a href="authentication.html">аутентификацию</a></td></tr>
+        </table>
+        <p><a href="../index.html">← Обзор документации</a> · <a href="../../index.html">На главную сайта</a></p>
+    </main>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/copy-code.js"></script>
+</body>
+</html>
