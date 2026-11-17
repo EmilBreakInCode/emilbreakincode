@@ -1,0 +1,20 @@
+[
+    {"title": "Обзор документации", "url": "index.html", "keywords": "обзор документация zernomonitor мониторинг зерна"},
+    {"title": "Установка", "url": "getting-started/index.html", "keywords": "установка монтаж датчики шлюз rs-485"},
+    {"title": "Настройка", "url": "getting-started/configuration.html", "keywords": "настройка config пороги температура влажность интервал опроса"},
+    {"title": "Первые шаги", "url": "getting-started/first-steps.html", "keywords": "первые шаги дашборд журнал тревога simulate"},
+    {"title": "Обзор руководств", "url": "guides/index.html", "keywords": "руководства guides"},
+    {"title": "Аутентификация", "url": "guides/authentication.html", "keywords": "аутентификация роли api-ключ x-api-key cookie"},
+    {"title": "Основы API", "url": "guides/api-basics.html", "keywords": "api basics curl json readings пагинация ошибки"},
+    {"title": "Продвинутое использование", "url": "guides/advanced-usage.html", "keywords": "зоны бурта автоматика вентиляция экспорт cron"},
+    {"title": "Диагностика", "url": "guides/troubleshooting.html", "keywords": "диагностика troubleshooting offline наводки конденсат 401"},
+    {"title": "Обзор REST API", "url": "api/index.html", "keywords": "rest api эндпоинты users orders webhooks readings"},
+    {"title": "API /users", "url": "api/users.html", "keywords": "users пользователи оператор admin роль"},
+    {"title": "API /orders", "url": "api/orders.html", "keywords": "orders наряды вентиляция сушка статус"},
+    {"title": "API /webhooks", "url": "api/webhooks.html", "keywords": "webhooks подписка alert hmac подпись повторы"},
+    {"title": "Обзор примеров", "url": "examples/index.html", "keywords": "примеры python javascript видео схема"},
+    {"title": "Пример 1: Python-опрос", "url": "examples/example-1.html", "keywords": "python requests опрос показаний тревоги"},
+    {"title": "Пример 2: JS-дашборд", "url": "examples/example-2.html", "keywords": "javascript fetch дашборд таблица подсветка"},
+    {"title": "История версий", "url": "changelog.html", "keywords": "changelog версии релиз v1.0.0"},
+    {"title": "FAQ", "url": "faq.html", "keywords": "faq вопросы интервал влажность сушка датчики буфер"}
+]
